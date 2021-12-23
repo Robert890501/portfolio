@@ -1,0 +1,29 @@
+.sidepanel {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    top: 20vh;
+    left: 2vw;
+    z-index: 5;
+    align-items: center;
+    &__link {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 15px;
+        svg path{
+            fill: #fff;
+          }
+    }
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background: #fff;
+        margin-bottom: 15px;
+    }
+    &__text {
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+}

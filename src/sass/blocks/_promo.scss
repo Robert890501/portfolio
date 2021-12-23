@@ -1,0 +1,29 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/main_bg.jpg) no-repeat 50%/cover;
+    padding-top: 205px;
+    &__title {
+        margin-top: 10px;
+    }
+    &__btns {
+        margin-top: 25px;
+        display: flex;
+
+    }
+    &__link {
+        padding: 12px 25px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        &:hover {
+            text-decoration: none;
+            color: #000000;
+            background-color: rgba($color: $main-color, $alpha: 0.3);
+        }
+        &:nth-child(2) {
+            margin-left: 19px;
+        }
+    }
+}
