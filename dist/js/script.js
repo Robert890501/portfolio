@@ -16,30 +16,44 @@ const scrollWin = () => {
     console.log(text);
 };
 
-scrollWin();
+const openMenu = () => {
 
-/* const scroll = () => {
-    const siberpanel = document.querySelector('.siberpanel');
+    const humburger = document.querySelector ('.menu__btn');
+    const menu = document.querySelector ('.menu');
+    const overlay = document.querySelector ('.menu__overlay');
 
-    goodsWrapper.innerHTML = '';
+    let isOpen = false;
 
-    goods.forEach((goodsItem) => {    
-        goodsWrapper.insertAdjacentHTML('beforeend', `
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card">
-                    ${goodsItem.sale ? '<div class="card-sale">🔥Hot Sale🔥</div>' : ''}
-                    <div class="card-img-wrapper">
-                        <span class="card-img-top"
-                            style="background-image: url('${goodsItem.img}')">
-                        </span>
-                    </div>
-                    <div class="card-body justify-content-between">
-                        <div class="card-price">${goodsItem.price}</div>
-                        <h5 class="card-title">${goodsItem.title}</h5>
-                        <button class="btn btn-primary">В корзину</button>
-                    </div>
-                </div>
-            </div>
-        `);
+    humburger.addEventListener('click', () => {
+        isOpen = !isOpen;
+
+        if(isOpen) {
+            humburger.classList.add('menu__btn_active');
+            menu.classList.add('menu_active');
+        }
+        else {
+           humburger.classList.remove('menu__btn_active');
+           menu.classList.remove('menu_active');   
+        }
+    }); 
+
+   
+    window.addEventListener("keydown", (e) => {
+        if (e.key == 'Escape') {
+                    menu.classList.remove('menu_active');
+                    humburger.classList.remove('menu__btn_active');
+        }
     });
-}; */
+
+    window.addEventListener('click', (e) => {
+        if (e.target == overlay) {
+            menu.classList.remove('menu_active');
+            humburger.classList.remove('menu__btn_active');
+        }
+    });
+};
+
+
+
+openMenu ();
+/* scrollWin(); */

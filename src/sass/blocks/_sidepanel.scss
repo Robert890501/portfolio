@@ -11,9 +11,16 @@
         width: 20px;
         height: 20px;
         margin-bottom: 15px;
+        
         svg path{
             fill: #fff;
           }
+        &:hover {
+            svg path{
+                transition: all 0.6s;
+                fill: $main-color;
+              }
+        }
     }
     &__divider {
         width: 2px;
