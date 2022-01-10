@@ -1,4 +1,15 @@
 .skills {
+    padding-top: 120px;
+    .title {
+        &_circle {
+            padding-left: 0;
+            &::before {
+                top: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
     &__wrapper {
         padding: 60px 10px 120px 10px;
         display: grid;

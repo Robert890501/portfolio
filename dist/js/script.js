@@ -53,7 +53,16 @@ const openMenu = () => {
     });
 };
 
+const skills = () => {
+    const percent = document.querySelectorAll('.skills__percent');
+    const rectangle = document.querySelectorAll('.skills__rectangle');
+
+    percent.forEach( (item, i) => {
+        rectangle[i].style.width = item.innerHTML;
+    });
+};
 
 
 openMenu ();
+skills ();
 /* scrollWin(); */
