@@ -1,0 +1,33 @@
+@media (max-width: 1200px) {
+    .conteiner {
+        max-width: 920px;
+    }
+}
+
+@media (max-width: 992px) {
+    .conteiner {
+        max-width: 740px;
+    }
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        max-width: 540px;
+    }
+    .title{
+        line-height: 40px;
+        &_fz48 {
+            font-size: 38px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .conteiner {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
